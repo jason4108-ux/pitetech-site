@@ -270,7 +270,7 @@ h3 {
   background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.58) 48%,rgba(0,0,0,.22) 100%)
 }
 .hero--home {
-  background-image:url("/assets/images/reception.webp");
+  background-image:url("/assets/images/about/reception.jpg");
   background-position:center 42%
 }
 .hero__grid {
@@ -497,6 +497,12 @@ h3 {
   font-weight:950;
   color:#9b7300
 }
+.application-grid article span {
+  display:inline-block;
+  color:#9b7300;
+  font-weight:950;
+  margin-bottom:.55rem
+}
 .application-grid {
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -565,7 +571,7 @@ h3 {
   background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.52) 50%,rgba(0,0,0,.18) 100%)
 }
 .page-hero--about {
-  background-image:url("/assets/images/reception.webp");
+  background-image:url("/assets/images/about/reception.jpg");
   background-position:center 42%
 }
 .page-hero__inner {
@@ -1127,6 +1133,58 @@ th {
 .workflow-grid--four {
   grid-template-columns:repeat(4,1fr)
 }
+.manufacturer-proof {
+  background:#111;
+  color:#fff
+}
+.manufacturer-proof h2 {
+  color:#fff
+}
+.manufacturer-proof p {
+  color:#dfdfdf
+}
+.manufacturer-proof .eyebrow {
+  color:var(--yellow)
+}
+.manufacturer-proof .eyebrow:before {
+  background:var(--yellow)
+}
+.manufacturer-proof .text-link {
+  color:#fff
+}
+.manufacturer-proof-grid {
+  display:grid;
+  grid-template-columns:.96fr 1.04fr;
+  gap:clamp(2rem,5vw,4rem);
+  align-items:center
+}
+.manufacturer-proof__media {
+  margin:0
+}
+.manufacturer-proof__media img {
+  width:100%;
+  aspect-ratio:1.5;
+  object-fit:cover;
+  border-radius:var(--radius-sm);
+  box-shadow:0 18px 50px rgba(0,0,0,.28)
+}
+.proof-badges {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:.75rem;
+  margin:1.4rem 0
+}
+.proof-badges span {
+  min-height:56px;
+  display:flex;
+  align-items:center;
+  padding:.8rem .95rem;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--radius-sm);
+  color:#f6f6f6;
+  font-weight:900;
+  background:rgba(255,255,255,.06)
+}
 .dual-panel {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -1179,9 +1237,70 @@ th {
   gap:3rem;
   align-items:center
 }
-.about-image img {
+.about-grid--intro {
+  grid-template-columns:1.04fr .96fr
+}
+.about-media-stack {
+  position:relative;
+  min-height:520px
+}
+.about-photo {
+  margin:0
+}
+.about-photo img {
+  width:100%;
+  object-fit:cover;
   border-radius:var(--radius);
   box-shadow:var(--shadow)
+}
+.about-photo--wide img {
+  aspect-ratio:1.42
+}
+.about-photo--offset {
+  position:absolute;
+  right:0;
+  bottom:0;
+  width:min(58%,430px);
+  background:#fff;
+  border:10px solid #fff;
+  border-radius:calc(var(--radius) + 4px);
+  box-shadow:0 18px 50px rgba(0,0,0,.18)
+}
+.about-photo--offset img {
+  aspect-ratio:1.42;
+  object-fit:cover;
+  box-shadow:none
+}
+.about-photo--full img {
+  aspect-ratio:1.5
+}
+.about-copy p {
+  font-size:1.05rem
+}
+.about-stats {
+  margin-top:1.6rem
+}
+.team-grid {
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  gap:clamp(2rem,5vw,4rem);
+  align-items:center
+}
+.mini-facts {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+  margin-top:1.4rem
+}
+.mini-facts span {
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+  padding:.55rem .85rem;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-weight:900;
+  background:#fff
 }
 .history-grid .section-head {
   margin-bottom:0
@@ -1225,6 +1344,43 @@ th {
   background:#fff;
   border:1px solid var(--line);
   font-weight:950
+}
+.cert-summary {
+  margin-bottom:1.2rem
+}
+.certificate-gallery {
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:1rem
+}
+.certificate-tile {
+  grid-column:span 2;
+  display:flex;
+  min-height:100%;
+  flex-direction:column;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  box-shadow:0 8px 24px rgba(0,0,0,.04)
+}
+.certificate-tile--wide {
+  grid-column:span 3
+}
+.certificate-tile img {
+  width:100%;
+  height:360px;
+  object-fit:contain;
+  background:#fff;
+  padding:.8rem;
+  border-bottom:1px solid var(--line)
+}
+.certificate-tile--wide img {
+  height:320px
+}
+.certificate-tile h3 {
+  padding:1rem 1.1rem 1.15rem;
+  font-size:1rem
 }
 .resource-grid {
   display:grid;
@@ -1436,7 +1592,7 @@ th {
     width:100%;
     padding:1rem
   }
-  .hero__grid,.product-hero__grid,.feature-split__grid,.about-grid,.product-detail-grid,.history-grid,.contact-grid,.dual-panel,.software-band__inner,.product-hero__grid--wide,.product-story-grid,.software-showcase,.compliance-grid,.technical-flow,.faq-grid {
+  .hero__grid,.product-hero__grid,.feature-split__grid,.about-grid,.team-grid,.product-detail-grid,.history-grid,.contact-grid,.dual-panel,.manufacturer-proof-grid,.software-band__inner,.product-hero__grid--wide,.product-story-grid,.software-showcase,.compliance-grid,.technical-flow,.faq-grid {
     grid-template-columns:1fr
   }
   .hero__grid,.product-hero__grid {
@@ -1448,6 +1604,12 @@ th {
   }
   .product-grid,.application-grid,.resource-grid,.footer-grid,.wiring-grid {
     grid-template-columns:repeat(2,1fr)
+  }
+  .certificate-gallery {
+    grid-template-columns:repeat(2,1fr)
+  }
+  .certificate-tile,.certificate-tile--wide {
+    grid-column:auto
   }
   .spec-grid {
     grid-template-columns:repeat(2,1fr)
@@ -1521,8 +1683,20 @@ th {
   .section-head--split {
     display:grid
   }
-  .product-grid,.application-grid,.resource-grid,.workflow-grid,.footer-grid,.stat-grid,.spec-grid,.spec-grid--six,.cert-grid,.mini-grid,.capability-grid,.accessory-grid,.software-gallery,.software-gallery__stack,.wiring-grid {
+  .product-grid,.application-grid,.resource-grid,.workflow-grid,.footer-grid,.stat-grid,.spec-grid,.spec-grid--six,.cert-grid,.certificate-gallery,.mini-grid,.capability-grid,.accessory-grid,.software-gallery,.software-gallery__stack,.wiring-grid,.proof-badges {
     grid-template-columns:1fr
+  }
+  .about-media-stack {
+    min-height:0
+  }
+  .about-photo--offset {
+    position:static;
+    width:100%;
+    margin-top:1rem
+  }
+  .certificate-tile img,.certificate-tile--wide img {
+    height:auto;
+    max-height:420px
   }
   .product-card--featured {
     grid-template-columns:1fr

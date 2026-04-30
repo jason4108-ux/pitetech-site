@@ -1,0 +1,40 @@
+# Legacy route compatibility. Canonical pages use clean directory URLs.
+/about.html /about/ 301
+/about-us.html /about/ 301
+/about-us /about/ 301
+/about-us/ /about/ 301
+
+/products.html / 301
+/products / 301
+/products/ / 301
+/product.html / 301
+/all-products.html / 301
+/product / 301
+/product/ / 301
+/all-products / 301
+/all-products/ / 301
+
+/contact.html /contact/ 301
+/contact-us.html /contact/ 301
+/contact-us /contact/ 301
+/contact-us/ /contact/ 301
+
+/download.html /downloads/ 301
+/downloads.html /downloads/ 301
+/download /downloads/ 301
+/download/ /downloads/ 301
+/file-share.html /downloads/ 301
+/file-share /downloads/ 301
+/file-share/ /downloads/ 301
+
+/battery-tester.html /battery-tester/ 301
+/ground-fault-locator.html /ground-fault-locator/ 301
+/dc-load-bank.html /dc-load-bank/ 301
+
+/assets/styles.css /assets/css/site.css 301
+/assets/main.js /assets/js/site.js 301
+/assets/img/battery-tester.webp /assets/images/battery-tester.webp 301
+/assets/img/dc-load-bank.webp /assets/images/dc-load-bank.webp 301
+/assets/img/ground-fault-locator.webp /assets/images/ground-fault-locator.webp 301
+/assets/img/reception.webp /assets/images/reception.webp 301
+/assets/img/favicon.svg /assets/images/favicon.svg 301

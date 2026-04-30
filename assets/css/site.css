@@ -574,6 +574,10 @@ h3 {
   background-image:url("/assets/images/about/reception.jpg");
   background-position:center 42%
 }
+.page-hero--contact {
+  background-image:url("/assets/images/about/reception.jpg");
+  background-position:center 44%
+}
 .page-hero--downloads {
   background-image:url("/assets/images/about/open-office.jpg");
   background-position:center 46%

@@ -574,6 +574,10 @@ h3 {
   background-image:url("/assets/images/about/reception.jpg");
   background-position:center 42%
 }
+.page-hero--downloads {
+  background-image:url("/assets/images/about/open-office.jpg");
+  background-position:center 46%
+}
 .page-hero__inner {
   position:relative;
   z-index:1;
@@ -592,6 +596,12 @@ h3 {
   background:rgba(255,255,255,.12);
   padding:.1rem .35rem;
   border-radius:6px
+}
+.download-hero__actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.85rem;
+  margin-top:2rem
 }
 .product-hero {
   background:#0d0d0d;
@@ -1407,6 +1417,161 @@ th {
 .resource-card p {
   flex:1
 }
+.download-overview {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem
+}
+.download-feature {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  min-height:310px;
+  padding:1.55rem;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:0 8px 24px rgba(0,0,0,.04)
+}
+.download-feature--dark {
+  background:#111;
+  color:#fff;
+  border-color:#111
+}
+.download-feature h3 {
+  font-size:1.75rem;
+  max-width:14ch
+}
+.download-feature--dark h3 {
+  color:#fff
+}
+.download-feature p {
+  flex:1;
+  margin-top:.8rem
+}
+.download-feature--dark p {
+  color:#dfdfdf
+}
+.download-type {
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:.35rem .65rem;
+  margin-bottom:1.1rem;
+  border-radius:999px;
+  background:var(--yellow);
+  color:#000;
+  font-size:.78rem;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:.08em
+}
+.download-meta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem;
+  margin:0 0 1.25rem
+}
+.download-meta span {
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:.32rem .6rem;
+  border-radius:999px;
+  background:#f3f4f6;
+  color:#42464d;
+  font-size:.82rem;
+  font-weight:900
+}
+.download-feature--dark .download-meta span {
+  background:rgba(255,255,255,.1);
+  color:#f4f4f4
+}
+.download-section-list {
+  display:grid;
+  gap:0
+}
+.download-product {
+  padding:2rem 0;
+  border-top:1px solid #d9dde3
+}
+.download-product:last-child {
+  border-bottom:1px solid #d9dde3
+}
+.download-product__head {
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:2rem;
+  margin-bottom:1.2rem
+}
+.download-product__head p {
+  max-width:680px;
+  margin:.55rem 0 0
+}
+.download-model {
+  display:inline-block;
+  margin-bottom:.55rem;
+  color:#6b5900;
+  font-size:.84rem;
+  font-weight:950;
+  letter-spacing:.12em;
+  text-transform:uppercase
+}
+.download-file-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:.85rem
+}
+.download-file {
+  position:relative;
+  display:grid;
+  gap:.38rem;
+  min-height:154px;
+  align-content:start;
+  padding:1.1rem 1.1rem 1.2rem;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  box-shadow:0 8px 24px rgba(0,0,0,.04);
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease
+}
+.download-file:before {
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:5px;
+  background:var(--yellow)
+}
+.download-file:hover {
+  color:#111;
+  border-color:#c8ccd4;
+  box-shadow:0 16px 32px rgba(0,0,0,.09);
+  transform:translateY(-3px)
+}
+.download-file__type {
+  width:max-content;
+  max-width:100%;
+  padding:.25rem .55rem;
+  border-radius:999px;
+  background:#f3f4f6;
+  color:#5b6068;
+  font-size:.76rem;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:.08em
+}
+.download-file strong {
+  color:#111;
+  font-size:1.05rem;
+  line-height:1.22
+}
+.download-file small {
+  margin-top:auto;
+  color:#696f78;
+  font-weight:850
+}
 .contact-grid {
   display:grid;
   grid-template-columns:.85fr 1.15fr;
@@ -1655,6 +1820,9 @@ th {
   .hero__actions {
     display:grid
   }
+  .download-hero__actions {
+    display:grid
+  }
   .button {
     width:100%
   }
@@ -1741,6 +1909,19 @@ th {
   }
   .document-actions {
     display:grid
+  }
+  .download-overview {
+    grid-template-columns:1fr
+  }
+  .download-feature {
+    min-height:0
+  }
+  .download-product__head {
+    display:grid;
+    gap:1rem
+  }
+  .download-file {
+    min-height:132px
   }
   table {
     min-width:620px

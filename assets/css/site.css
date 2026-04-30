@@ -613,8 +613,8 @@ h3 {
   background-position:center 46%
 }
 .product-hero--pite3980 {
-  background-image:url("/assets/images/pite3980-hero.jpg");
-  background-position:center
+  background-image:url("/assets/images/pite3980/field-units.jpg");
+  background-position:center 50%
 }
 .product-hero__grid {
   display:grid;
@@ -791,6 +791,9 @@ h3 {
   object-fit:contain;
   background:#fff
 }
+.image-callout--wide img {
+  aspect-ratio:16/9
+}
 .image-callout figcaption {
   margin-top:.8rem;
   color:var(--muted);
@@ -823,6 +826,35 @@ h3 {
   color:var(--muted);
   font-weight:750;
   font-size:.92rem
+}
+.wiring-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+  margin-top:1.25rem
+}
+.wiring-card {
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius-sm);
+  box-shadow:0 8px 24px rgba(0,0,0,.04)
+}
+.wiring-card img {
+  width:100%;
+  aspect-ratio:2.8;
+  object-fit:contain;
+  background:#fff;
+  border-bottom:1px solid var(--line)
+}
+.wiring-card div {
+  padding:1.2rem
+}
+.wiring-card span {
+  display:inline-block;
+  color:#9b7300;
+  font-weight:950;
+  margin-bottom:.55rem
 }
 .flow-note {
   display:flex;
@@ -910,6 +942,17 @@ h3 {
 }
 .software-gallery__stack img {
   height:222px
+}
+.software-gallery--wide {
+  grid-template-columns:1fr;
+  gap:1rem
+}
+.software-gallery--wide img {
+  height:auto;
+  max-height:360px;
+  object-fit:contain;
+  object-position:center;
+  background:#fff
 }
 .accessory-grid {
   display:grid;
@@ -1403,7 +1446,7 @@ th {
   .section-head--sticky {
     position:static
   }
-  .product-grid,.application-grid,.resource-grid,.footer-grid {
+  .product-grid,.application-grid,.resource-grid,.footer-grid,.wiring-grid {
     grid-template-columns:repeat(2,1fr)
   }
   .spec-grid {
@@ -1478,7 +1521,7 @@ th {
   .section-head--split {
     display:grid
   }
-  .product-grid,.application-grid,.resource-grid,.workflow-grid,.footer-grid,.stat-grid,.spec-grid,.spec-grid--six,.cert-grid,.mini-grid,.capability-grid,.accessory-grid,.software-gallery,.software-gallery__stack {
+  .product-grid,.application-grid,.resource-grid,.workflow-grid,.footer-grid,.stat-grid,.spec-grid,.spec-grid--six,.cert-grid,.mini-grid,.capability-grid,.accessory-grid,.software-gallery,.software-gallery__stack,.wiring-grid {
     grid-template-columns:1fr
   }
   .product-card--featured {

@@ -1,10 +1,4 @@
 # ===============================
-# ✅ 图片走 R2 CDN（最重要）
-# ===============================
-https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/* https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.devhttps://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/:splat 302
-
-
-# ===============================
 # ✅ 页面标准化（去 .html）
 # ===============================
 /about.html /about/ 301
@@ -29,7 +23,6 @@ https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/* https://pub-
 /ground-fault-locator.html /ground-fault-locator/ 301
 /dc-load-bank.html /dc-load-bank/ 301
 
-
 # ===============================
 # ✅ 产品入口统一
 # ===============================
@@ -43,21 +36,22 @@ https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/* https://pub-
 /all-products / 301
 /all-products/ / 301
 
-
 # ===============================
-# ✅ 旧资源路径 → 新路径
+# ✅ 旧资源路径 → CDN（保留兼容）
 # ===============================
-/assets/styles.css /assets/css/site.css 301
-/assets/main.js /assets/js/site.js 301
-
 /assets/img/battery-tester.webp https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/battery-tester.webp 301
 /assets/img/dc-load-bank.webp https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/dc-load-bank.webp 301
 /assets/img/ground-fault-locator.webp https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/ground-fault-locator.webp 301
 /assets/img/reception.webp https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/reception.webp 301
 /assets/img/favicon.svg https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/favicon.svg 301
 
+# ===============================
+# ✅ CSS / JS
+# ===============================
+/assets/styles.css /assets/css/site.css 301
+/assets/main.js /assets/js/site.js 301
 
 # ===============================
-# ✅ 防 404（非常关键）
+# ✅ 防 404（必须保留）
 # ===============================
 /* /index.html 200

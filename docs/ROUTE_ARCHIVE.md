@@ -24,7 +24,7 @@
 | /dc-load-bank.html | /dc-load-bank/ | 301 redirect |
 | /assets/styles.css | /assets/css/site.css | 301 redirect |
 | /assets/main.js | /assets/js/site.js | 301 redirect |
-| /assets/img/* | /assets/images/* | 301 redirect |
+| /assets/img/* | https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/* | 301 redirect |
 
 ## 命名约定
 

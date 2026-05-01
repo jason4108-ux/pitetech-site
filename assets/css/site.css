@@ -278,7 +278,7 @@ h3 {
   background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.58) 48%,rgba(0,0,0,.22) 100%)
 }
 .hero--home {
-  background-image:url("/assets/images/about/reception.jpg");
+  background-image:url("https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/about/reception.jpg");
   background-position:center 42%
 }
 .hero__grid {
@@ -582,15 +582,15 @@ h3 {
   background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.52) 50%,rgba(0,0,0,.18) 100%)
 }
 .page-hero--about {
-  background-image:url("/assets/images/about/reception.jpg");
+  background-image:url("https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/about/reception.jpg");
   background-position:center 42%
 }
 .page-hero--contact {
-  background-image:url("/assets/images/about/reception.jpg");
+  background-image:url("https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/about/reception.jpg");
   background-position:center 44%
 }
 .page-hero--downloads {
-  background-image:url("/assets/images/about/open-office.jpg");
+  background-image:url("https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/about/open-office.jpg");
   background-position:center 46%
 }
 .page-hero__inner {
@@ -633,18 +633,18 @@ h3 {
   background:linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.62) 48%,rgba(0,0,0,.2) 100%)
 }
 .product-hero--pite3915 {
-  background-image:url("/assets/images/pite3915-hero.jpg");
+  background-image:url("https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/pite3915-hero.jpg");
   background-position:center
 }
 .product-hero--field:before {
   background:linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.7) 44%,rgba(0,0,0,.28) 74%,rgba(0,0,0,.2) 100%)
 }
 .product-hero--pite3836 {
-  background-image:url("/assets/images/pite3836/field-testing.jpg");
+  background-image:url("https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/pite3836/field-testing.jpg");
   background-position:center 46%
 }
 .product-hero--pite3980 {
-  background-image:url("/assets/images/pite3980/field-units.jpg");
+  background-image:url("https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/pite3980/field-units.jpg");
   background-position:center 50%
 }
 .product-hero__grid {

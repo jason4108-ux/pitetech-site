@@ -8,7 +8,7 @@
 # 图片走 R2（核心）
 # ===============================
 assets/images/
-**/assets/images/
+**https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/
 
 # ===============================
 # 可选：以后扩展

@@ -593,6 +593,10 @@ h3 {
   background-image:url("https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/about/open-office.jpg");
   background-position:center 46%
 }
+.page-hero--404 {
+  background-image:url("https://pub-cc14b1c1829a4b8cb92ae7a126f62cbb.r2.dev/assets/images/about/reception.jpg");
+  background-position:center 42%
+}
 .page-hero__inner {
   position:relative;
   z-index:1;
@@ -1746,11 +1750,13 @@ th {
     box-shadow:var(--shadow);
     transform:translateY(-12px);
     opacity:0;
+    visibility:hidden;
     pointer-events:none;
     transition:.18s ease
   }
   .menu-open .primary-nav {
     opacity:1;
+    visibility:visible;
     pointer-events:auto;
     transform:translateY(0)
   }

@@ -18,7 +18,8 @@
     });
 
     nav.addEventListener('click', (event) => {
-      if (event.target instanceof HTMLAnchorElement) setMenu(false);
+      const target = event.target;
+      if (target instanceof Element && target.closest('a')) setMenu(false);
     });
 
     document.addEventListener('keydown', (event) => {
@@ -34,8 +35,8 @@
     });
   }
 
-  const form = document.querySelector('[data-mailto-form]');
-  if (!form) return;
+  const forms = document.querySelectorAll('[data-mailto-form]');
+  if (!forms.length) return;
 
   const params = new URLSearchParams(window.location.search);
   const productMap = new Map([
@@ -47,52 +48,58 @@
     ['dc-load-bank', 'PITE3980 DC Load Bank'],
   ]);
 
-  const productSelect = form.elements.namedItem('Product');
-  const requestedProduct = params.get('product');
-  if (productSelect instanceof HTMLSelectElement && requestedProduct) {
-    const normalized = productMap.get(requestedProduct) || requestedProduct;
-    const option = Array.from(productSelect.options).find((item) => item.value === normalized || item.text === normalized);
-    if (option) productSelect.value = option.value || option.text;
-  }
-
-  const message = form.elements.namedItem('Message');
-  const resource = params.get('resource');
-  if (message instanceof HTMLTextAreaElement && resource && !message.value.trim()) {
-    message.value = 'Resource request: ' + resource + '\n\nProject details:';
-  }
-
-  const fields = form.querySelectorAll('input, textarea, select');
-  fields.forEach((field) => {
-    field.addEventListener('invalid', () => {
-      field.setAttribute('aria-invalid', 'true');
-    });
-    field.addEventListener('input', () => {
-      if (field.validity.valid) field.removeAttribute('aria-invalid');
-    });
-    field.addEventListener('blur', () => {
-      if (field.validity.valid) field.removeAttribute('aria-invalid');
-    });
-  });
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    if (!form.reportValidity()) {
-      const firstInvalid = form.querySelector(':invalid');
-      if (firstInvalid instanceof HTMLElement) firstInvalid.focus();
-      return;
+  forms.forEach((form) => {
+    const productSelect = form.elements.namedItem('Product');
+    const requestedProduct = params.get('product');
+    if (productSelect instanceof HTMLSelectElement && requestedProduct) {
+      const normalized = productMap.get(requestedProduct) || requestedProduct;
+      const option = Array.from(productSelect.options).find((item) => item.value === normalized || item.text === normalized);
+      if (option) productSelect.value = option.value || option.text;
     }
 
-    const data = new FormData(form);
-    const product = data.get('Product') || 'PITE product inquiry';
-    const subject = 'PITE inquiry - ' + product;
-    const lines = [];
-
-    for (const [key, value] of data.entries()) {
-      const text = String(value).trim();
-      if (text) lines.push(key + ': ' + text);
+    const message = form.elements.namedItem('Message');
+    const resource = params.get('resource');
+    if (message instanceof HTMLTextAreaElement && resource && !message.value.trim()) {
+      message.value = 'Resource request: ' + resource + '\n\nProject details:';
     }
 
-    window.location.href = 'mailto:sales@pitetech.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    const fields = form.querySelectorAll('input, textarea, select');
+    fields.forEach((field) => {
+      field.addEventListener('invalid', () => {
+        field.setAttribute('aria-invalid', 'true');
+      });
+      field.addEventListener('input', () => {
+        if (field.validity.valid) field.removeAttribute('aria-invalid');
+      });
+      field.addEventListener('change', () => {
+        if (field.validity.valid) field.removeAttribute('aria-invalid');
+      });
+      field.addEventListener('blur', () => {
+        if (field.validity.valid) field.removeAttribute('aria-invalid');
+      });
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (!form.reportValidity()) {
+        const firstInvalid = form.querySelector(':invalid');
+        if (firstInvalid instanceof HTMLElement) firstInvalid.focus();
+        return;
+      }
+
+      const data = new FormData(form);
+      const product = data.get('Product') || 'PITE product inquiry';
+      const subject = 'PITE inquiry - ' + product;
+      const lines = [];
+
+      for (const [key, value] of data.entries()) {
+        const text = String(value).trim();
+        if (text) lines.push(key + ': ' + text);
+      }
+
+      const recipient = form.getAttribute('data-mailto-recipient') || 'sales@pitetech.com';
+      window.location.href = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    });
   });
 })();
